@@ -21,6 +21,18 @@ def config__tela():
 config__tela()
 
 
+# Ocultar menus
+def ocultar_menu():
+    hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+    st.markdown(hide_st_style, unsafe_allow_html=True)
+ocultar_menu()
+
+
 st.divider()
 
 
