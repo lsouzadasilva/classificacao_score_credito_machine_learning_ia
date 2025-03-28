@@ -28,8 +28,3 @@ Além disso, a aplicação inclui:
 - **Gráficos de performance:**
   - Matriz de Confusão
   - Curva ROC
-
----
-
-## 📂 Estrutura do Projeto
-
