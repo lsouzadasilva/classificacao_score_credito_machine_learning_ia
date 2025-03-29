@@ -18,8 +18,8 @@ def config__tela():
     )
     st.markdown("<h1 style='text-align: center; color: #4B8BBE;'>Classificação Análise de Crédito 🏷️</h1>", unsafe_allow_html=True)
     st.markdown("<h4 style='text-align: center; color: #FFD700;'>Análise realizada em duas bases de dados: Treinamento & Teste 🎲</h4>", unsafe_allow_html=True)
-    st.markdown("""**Desenvolvido por Leandro Souza**  
-    [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leandro-souza-bi/)""")
+    st.markdown("""<h4 style='text-align: center; color: #FFFFFF;'>**Desenvolvido por Leandro Souza**  
+    [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/leandro-souza-bi/)</h4>""", unsafe_allow_html=True)
 config__tela()
 
 
