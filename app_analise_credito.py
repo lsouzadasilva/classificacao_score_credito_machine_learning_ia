@@ -23,6 +23,7 @@ def config__tela():
 config__tela()
 
 
+
 # Ocultar menus
 def ocultar_menu():
     hide_st_style = """
