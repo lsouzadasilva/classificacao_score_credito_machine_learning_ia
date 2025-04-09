@@ -22,10 +22,13 @@ def config__tela():
     <h4 style='text-align: center; color: #FFFFFF;'>Desenvolvido por Leandro Souza  
     <a href="https://www.linkedin.com/in/leandro-souza-bi/" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/lsouzadasilva" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
     </a></h4>
     """, unsafe_allow_html=True)
-config__tela()
 
+config__tela()
 
 
 
