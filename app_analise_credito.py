@@ -20,7 +20,7 @@ def config__tela():
     st.markdown("<h4 style='text-align: center; color: #FFD700;'>Análise realizada em duas bases de dados: Treinamento & Teste 🎲</h4>", unsafe_allow_html=True)
     st.markdown("""
     <h4 style='text-align: center; color: #FFFFFF;'>Desenvolvido por Leandro Souza<br>
-        <a href="https://www.linkedin.com/in//leandro-souza-dados/" target="_blank" style="text-decoration: none; outline: none; border: none;">
+        <a href="https://www.linkedin.com/in/leandro-souza-dados/" target="_blank" style="text-decoration: none; outline: none; border: none;">
             <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
         </a>
         <a href="https://github.com/lsouzadasilva/classificacao_score_credito_machine_learning" target="_blank" style="text-decoration: none; outline: none; border: none;">
