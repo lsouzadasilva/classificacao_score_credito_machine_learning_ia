@@ -221,19 +221,35 @@ def resultado():
 resultados = resultado()
 
 def exibir_resultados():
-    contagem = Counter(resultados)
-    categorias = []
-    valores = []
+    # Adiciona a previsão ao DataFrame de teste
+    df_resultado = df_teste.copy()
+    df_resultado['score_previsto'] = resultados
+
+    # Decodificando profissão para valores originais
+    df_resultado['profissao'] = codificador_profissao.inverse_transform(df_resultado['profissao'])
+
+    # Agrupar por score e profissão
+    agrupado = df_resultado.groupby(['score_previsto', 'profissao']).size().reset_index(name='quantidade')
+
+    # Exibir resumo geral por categoria
+    contagem_total = Counter(resultados)
+    total_geral = sum(contagem_total.values())
     
-    # Ordenar as categorias pela frequência em ordem decrescente
-    for categoria, freq in sorted(contagem.items(), key=lambda item: item[1], reverse=True):
-        categorias.append(categoria)
-        valores.append(freq)
-        st.progress(freq / sum(contagem.values()))
-        st.write(f"**{categoria}:** {freq} Clientes")
+    st.markdown("### 🎯 Resumo por Score de Crédito e Profissão")
+
+    for categoria, freq in sorted(contagem_total.items(), key=lambda item: item[1], reverse=True):
+        st.progress(freq / total_geral)
+        st.write(f"**{categoria}:** {freq} clientes")
         
+        # Filtra profissões para essa categoria
+        sub_df = agrupado[agrupado['score_previsto'] == categoria]
+
+        for _, row in sub_df.iterrows():
+            st.write(f"- {row['profissao']}: {row['quantidade']} cliente(s)")
+    
     if st.sidebar.button('Atualizar Dados 🔄'):
         st.rerun()
+
 
 exibir_resultados()
 
@@ -277,4 +293,3 @@ ax_roc.set_ylabel('Taxa de Verdadeiros Positivos')
 ax_roc.set_title('Curva ROC - Multiclasse')
 ax_roc.legend(loc="lower right")
 st.pyplot(fig_roc)
-
